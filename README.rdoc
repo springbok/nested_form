@@ -10,7 +10,7 @@ An example project showing how this works is available in the {complex-nested-fo
 
 I've modified it so that a table view can be used for the nested form, the hidden blueprint now uses a textarea tag rather than a div to prevent browsers from eating the table tags.
 
-Also changes the script that creates the new entry to do it AFTER the link rather than before it, to me it makes more sense to have new records inserted at the top of the view this is especially with lot of records.
+Also changesd the script that creates the new entry to do it AFTER the link rather than before it, to me it makes more sense to have new records inserted at the top of the view this is especially true when dealing with lot of records.
 
 == Setup
 
