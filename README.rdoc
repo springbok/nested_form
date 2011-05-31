@@ -12,6 +12,12 @@ I've modified it so that a table view can be used for the nested form, the hidde
 
 Also changesd the script that creates the new entry to do it AFTER the link rather than before it, to me it makes more sense to have new records inserted at the top of the view this is especially true when dealing with lot of records.
 
+Added the ability to specify an alternate position, by default the new item will be inserted after the link. To specify an alternate location for new items pass in the class using the rel attribute, e.g.
+
+f.link_to_add('Add', :hotlist_details, :rel => '.hotlist-details-new-records')
+
+Please note, this has only been done for the jQuery version.
+
 == Setup
 
 Add it to your Gemfile then run +bundle+ to install it.
