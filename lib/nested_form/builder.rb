@@ -21,10 +21,10 @@ module NestedForm
       @fields ||= {}
       @template.after_nested_form(association) do
         model_object = object.class.reflect_on_association(association).klass.new
+        model_array = []
+        model_array << model_object
         output = %Q[<textarea id="#{association}_fields_blueprint" style="display: none">].html_safe
-	obj = []
-	obj << model_object.send(:new)
-        output << fields_for(obj, model_object, :child_index => "new_#{association}", &@fields[association])
+        output << fields_for(association, model_array, :child_index => "new_#{association}", &@fields[association])
         output.safe_concat('</textarea>')
         output
       end
